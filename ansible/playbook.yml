@@ -1,0 +1,6 @@
+--- 
+- hosts: 127.0.0.1
+  sudo: yes
+  roles:
+     - java8
+     - { role: Datadog.datadog, datadog_api_key: "{{ datadog_api_key }}", when: datadog_api_key is defined }
